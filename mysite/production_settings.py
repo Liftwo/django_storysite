@@ -18,4 +18,4 @@ DATABASE_ROUTERS = ['db_router.AgileRouter']
 STATIC_ROOT = 'staticfiles'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
-DEBUG = False
+DEBUG = True
