@@ -82,7 +82,7 @@ DATABASES = {
     },
     'agile_db': {
         'ENGINE':'django.db.backends.sqlite3',
-        'NAME': '/Users/zooeytsai/資料庫/agile_tai.db',
+        'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
     },
 }
 
