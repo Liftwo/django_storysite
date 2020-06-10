@@ -7,9 +7,8 @@ from django.shortcuts import redirect, render
 # def here(request):
 #     return HttpResponse('Hell, let get it')
 
-
 def index(request):
-    return render(request, 'index.html', {'name': 'Agile Story'})
+    return render(request, 'template_whoami.html', {'name': 'Agile Story'})
 
 def post_signup(request):
     username = request.POST['username']
