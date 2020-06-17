@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19ca86a6-e683-4a7c-a7dd-b353e2e01cd3" name="Default Changelist" comment="">
+    <list default="true" id="19ca86a6-e683-4a7c-a7dd-b353e2e01cd3" name="Default Changelist" comment="change pd_settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/production_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/production_settings.py" afterDir="false" />
     </list>
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/production_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -330,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592405194301</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change homepage">
+      <created>1592406556309</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592406556309</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change pd_settings">
+      <created>1592406723973</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592406723973</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -379,7 +393,8 @@
     <MESSAGE value="remove procfile" />
     <MESSAGE value="change sqlte path" />
     <MESSAGE value="change homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="change homepage" />
+    <MESSAGE value="change pd_settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pd_settings" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/agile_2/migrations/0007_auto_20200531_0122.py" />
@@ -611,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/production_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
