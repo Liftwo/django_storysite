@@ -80,9 +80,17 @@ DATABASES = {
         'ENGINE':'django.db.backends.sqlite3',
         'NAME': '/Users/zooeytsai/PycharmProjects/mysite/db.sqlite3',
     },
+    # 'agile_db': {
+    #     'ENGINE':'django.db.backends.sqlite3',
+    #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
+    # },
     'agile_db': {
-        'ENGINE':'django.db.backends.sqlite3',
-        'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'agile',
+        'USER':'zooeytsai',
+        'PASSWORD':'tyla910ai',
+        'HOST':'localhost',
+        'PORT':'5432',
     },
 }
 

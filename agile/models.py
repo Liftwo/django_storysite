@@ -16,7 +16,7 @@ class Agile(models.Model):
     class Meta:
         managed = True
         app_label = 'agile'
-        db_table = 'agile'
+        db_table = 'agile_story'
 
 
 class AgileAdmin(admin.ModelAdmin):
