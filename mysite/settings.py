@@ -94,7 +94,7 @@ DATABASES = {
     },
 }
 
-# DATABASE_ROUTERS = ['db_router.AgileRouter']
+DATABASE_ROUTERS = ['db_router.AgileRouter']
 # DATABASE_APPS_MAPPING = {
 #     'classes':'default',
 #     'agile':'dbagile',
