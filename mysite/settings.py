@@ -76,15 +76,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE':'django.db.backends.sqlite3',
-        'NAME': '/Users/zooeytsai/PycharmProjects/mysite/db.sqlite3',
-    },
+    # 'default': {
+    #     'ENGINE':'django.db.backends.sqlite3',
+    #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/db.sqlite3',
+    # },
     # 'agile_db': {
     #     'ENGINE':'django.db.backends.sqlite3',
     #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
     # },
-    'agile_db': {
+    'default': {
         'ENGINE':'django.db.backends.postgresql',
         'NAME':'agile',
         'USER':'zooeytsai',
