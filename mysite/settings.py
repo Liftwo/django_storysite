@@ -86,7 +86,7 @@ DATABASES = {
     # },
     'agile_db': {
         'ENGINE':'django.db.backends.postgresql',
-        'NAME':'PostgreSQL 12',
+        'NAME':'agile',
         'USER':'zooeytsai',
         'PASSWORD':'tyla910ai',
         'HOST':'localhost',
