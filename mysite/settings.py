@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -94,7 +96,9 @@ DATABASES = {
     },
 }
 
-DATABASE_ROUTERS = ['db_router.AgileRouter']
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+# DATABASE_ROUTERS = ['db_router.AgileRouter']
 # DATABASE_APPS_MAPPING = {
 #     'classes':'default',
 #     'agile':'dbagile',
