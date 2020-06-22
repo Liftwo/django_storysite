@@ -22,5 +22,6 @@ urlpatterns = [
     path('classes/', include('classes.urls')),
     path('admin/', admin.site.urls),
     path('agile/', include('agile.urls')),
+    path('accounts/login/', 'django.contrib.auth.views.login'),
 
 ]
