@@ -9,4 +9,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('archive/', views.article_index, name='archive'),
     path('<str:pk>/', views.singleAgile, name='agile_id'),
+    path('archive/accounts/login/', views.article_index, name='archive_login'),
 ]

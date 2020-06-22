@@ -44,7 +44,7 @@ def post_signup(request):
     else:
         return redirect('/signup', locals())
 
-@login_required(login_url='accounts/login/')
+@login_required
 def article_index(request):
     name = 'Archive'
     Articles = Agile.objects.all()
