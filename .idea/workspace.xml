@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19ca86a6-e683-4a7c-a7dd-b353e2e01cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agile/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agile/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/agile/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+            <state relative-caret-position="84">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -134,7 +134,6 @@
         <option value="$PROJECT_DIR$/agile_2/views.py" />
         <option value="$PROJECT_DIR$/agile_2/urls.py" />
         <option value="$PROJECT_DIR$/agile_2/models.py" />
-        <option value="$PROJECT_DIR$/agile/urls.py" />
         <option value="$PROJECT_DIR$/classes/views.py" />
         <option value="$PROJECT_DIR$/classes/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -153,6 +152,7 @@
         <option value="$PROJECT_DIR$/classes/models.py" />
         <option value="$PROJECT_DIR$/mysite/production_settings.py" />
         <option value="$PROJECT_DIR$/agile/views.py" />
+        <option value="$PROJECT_DIR$/agile/urls.py" />
       </list>
     </option>
   </component>
@@ -488,7 +488,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592842694511</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="debut=False">
+      <created>1592843025100</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1592843025100</updated>
+    </task>
+    <task id="LOCAL-00038" summary="debut=False">
+      <created>1592844179648</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1592844179648</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -769,22 +783,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agile/urls.py">
+    <entry file="file://$PROJECT_DIR$/agile/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="84">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agile/views.py">
+    <entry file="file://$PROJECT_DIR$/agile/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        <state relative-caret-position="176">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
