@@ -15,7 +15,7 @@
 
     <title>Aroha, world!</title>
   </head>
-<body>
+  <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -36,9 +36,10 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <div id="drop" class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="{% url 'show_register' %}">Register list</a>
-
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
         </ul>
@@ -48,7 +49,12 @@
           <li><a class="auth" href="{% url 'logout' %}">LogOut</a></li>
         </ul>
         {% else %}
-        <p>尚未登入<a href="/agile/login_custom">登入</a></p>
+        <form class="form-inline my-2 my-lg-0">
+          <!--<input class="form-control mr-sm-2" type="text" placeholder="Email">-->
+          <!--<input class="form-control mr-sm-2" type="password" placeholder="Password">-->
+          <a href="{% url 'login_custom' %}"><button class="btn btn-primary" type="button">Log in</button></a>&nbsp
+          <a href="{% url 'register_create' %}"><button class="btn btn-primary" type="button">Register</button></a>
+        </form>
 
         {% endif %}
       </div>
@@ -59,23 +65,17 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <h1 class="display-4">{{agile_list.title}}</h1>
-          </div>
+          <h1 class="display-3">{{name}}</h1>
+          <p>俐落ＣＰ同人小説</p>
+          <p>拜訪人數:{{visit_template}}</p>
+          <p><a class="btn btn-primary btn-lg" href="/agile/archive" role="button">Learn more &raquo;</a></p>
         </div>
       </div>
 
-      <div class="container">
 
-        <!-- Example row of columns -->
-        <div class="card mx-auto" style="width: 50rem;">
-          <div class="card-body">
-            <p class="card-text">{{agile_list.content}}</p>
-          </div>
-        </div>
 
-        <hr>
       </div> <!-- /container -->
+
     </main>
 
     <footer class="container">

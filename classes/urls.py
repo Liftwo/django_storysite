@@ -19,7 +19,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('register/', views.register, name='register'),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('photo/', views.photo_index, name='photo'),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    # path('photo/', views.photo_index, name='photo'),
+    # path('login/post', views.post_login, name='login_custom'),
+
 ]

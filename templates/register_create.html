@@ -1,9 +1,4 @@
 <!doctype html>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -37,20 +32,18 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="{% url 'show_register' %}">Register list</a>
-
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
         </ul>
-        {% if user.is_authenticated %}
-        <ul class="nav navbar navbar-right">
-          <li><a class="auth" href="#">{{user.username}}</a></li>&nbsp
-          <li><a class="auth" href="{% url 'logout' %}">LogOut</a></li>
-        </ul>
-        {% else %}
-        <p>尚未登入<a href="/agile/login_custom">登入</a></p>
-
-        {% endif %}
+        <form class="form-inline my-2 my-lg-0">
+          <!--<input class="form-control mr-sm-2" type="text" placeholder="Email">-->
+          <!--<input class="form-control mr-sm-2" type="password" placeholder="Password">-->
+          <a href="/agile/login_custom/"><button class="btn btn-primary" type="button">Log in</button></a>&nbsp
+          <a href="{% url 'register' %}"><button class="btn btn-primary" type="button">Register</button></a>
+        </form>
       </div>
     </nav>
 
@@ -58,28 +51,25 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <h1 class="display-4">{{agile_list.title}}</h1>
-          </div>
-        </div>
       </div>
 
       <div class="container">
-
         <!-- Example row of columns -->
-        <div class="card mx-auto" style="width: 50rem;">
-          <div class="card-body">
-            <p class="card-text">{{agile_list.content}}</p>
-          </div>
-        </div>
-
-        <hr>
+        <h1>Register</h1>
+        <h5>(申請完幾日內即可登入)</h5>
+        {% block content %}
+          <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+          <button type="submit">送出</button>
+          </form>
+        {% endblock content %}
       </div> <!-- /container -->
+
     </main>
 
     <footer class="container">
-      <p>&copy; Company 2017-2018</p>
+      <p>Thank you for your application!</p>
     </footer>
 
     <!-- Bootstrap core JavaScript

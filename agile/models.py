@@ -10,7 +10,8 @@ from django.contrib import admin
 
 
 class Agile(models.Model):
-    title = models.TextField(blank=True, null=False, primary_key=True)
+    index = models.IntegerField(blank=False, null=False, primary_key=True, default='don')
+    title = models.TextField(blank=True, null=False)
     content = models.TextField(blank=True, null=True)
 
     class Meta:
@@ -21,6 +22,15 @@ class Agile(models.Model):
 
 class AgileAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
+
+
+class Register(models.Model):
+    username = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
+
+
+class Visit(models.Model):
+    times = models.IntegerField()
 
 
 

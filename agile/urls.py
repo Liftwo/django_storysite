@@ -1,13 +1,17 @@
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from .views import AgileDetail
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('register/', views.register, name='register'),
-    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('archive/', views.article_index, name='archive'),
-    path('<str:pk>/', views.singleAgile, name='agile_id'),
-    # path('accounts/login/', views.article_index, name='archive_login'),
+    path('<int:pk>/', views.singleAgile, name='agile_id'),
+    path('login_custom/', views.post_login, name='login_custom'),
+    path('logout/', views.post_logout, name='logout'),
+    path('register_create/', views.register_create_view, name='register_create'),
+    path('show_register/', views.show_register, name='show_register'),
+    path('test/', views.test)
+
 ]
