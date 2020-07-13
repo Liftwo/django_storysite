@@ -11,7 +11,7 @@ from django.contrib import admin
 
 class Agile(models.Model):
     index = models.IntegerField(blank=False, null=False, primary_key=True, default='don')
-    title = models.TextField(blank=True, null=False)
+    title = models.TextField(blank=True, null=False, default='don')
     content = models.TextField(blank=True, null=True)
 
     class Meta:
