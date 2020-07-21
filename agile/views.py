@@ -14,8 +14,8 @@ from .forms import RegisterForm
 
 
 def homepage(request):
-    if not "agile" in request.session:
-        request.session["homepage"]=True
+    if "agile" not in request.session:
+        request.session["agile"]=True
         visit_model = Visit.objects.get(pk=1)
         visit_model.times+=1
         visit_model.save()
