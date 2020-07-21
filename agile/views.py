@@ -14,9 +14,15 @@ from .forms import RegisterForm
 
 
 def homepage(request):
-    visit_model = Visit.objects.get(pk=1)
-    visit_model.times+=1
-    visit_model.save()
+    if not "agile" in request.session:
+        request.session["homepage"]=True
+        visit_model = Visit.objects.get(pk=1)
+        visit_model.times+=1
+        visit_model.save()
+    else:
+        visit_model = Visit.objects.get(pk=1)
+        visit_model.times+=0
+        visit_model.save()
     context = {'name': 'Agile Story', 'visit_template': visit_model.times}
     return render(request, 'home.html', context)
 
