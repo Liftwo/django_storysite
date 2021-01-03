@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
+    'django-cors-headers',
     'classes',
     'agile',
 ]
@@ -160,4 +160,3 @@ CORS_ALLOW_ORIGIN = (
     'http://localhost:63342',
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
