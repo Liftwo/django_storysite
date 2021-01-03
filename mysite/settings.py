@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'classes',
     'agile',
 ]
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -87,11 +90,11 @@ DATABASES = {
     #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
     # },
     'default': {
-        'ENGINE':'django.db.backends.postgresql',
-        'NAME':'agile',
-        'USER':'zooeytsai',
-        'PASSWORD':'tyla910ai',
-        'HOST':'localhost',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'agile',
+        'USER': 'zooeytsai',
+        'PASSWORD': 'tyla910ai',
+        'HOST': 'localhost',
 
     },
 }
@@ -146,3 +149,15 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/agile'
 
 LOGOUT_REDIRECT_URL = '/agile'
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOW_ORIGIN = (
+    'https://example.com',
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+    'http://localhost:63342',
+)
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
