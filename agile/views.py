@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.contrib.auth.decorators import login_required, user_passes_test
 
-from .forms import RegisterForm
+from .forms import RegisterForm, ForgetFrom
 
 
 def homepage(request):
@@ -25,7 +25,6 @@ def homepage(request):
         visit_model.save()
     context = {'name': 'Agile Story', 'visit_template': visit_model.times}
     return render(request, 'home.html', context)
-
 
 def register(request):
     if request.method == 'POST':
@@ -110,5 +109,31 @@ def show_register(request):
 
 def test(request):
     return render(request, 'test.html')
+
+
+def forgot_pwd_view(request):
+    if request.method == 'POST':
+        form = ForgetFrom(request.POST)
+        print("Errors", form.errors)
+        if form.is_valid():
+            all_username = Register.objects.values('username')
+            for i in all_username:
+                all_value = [v for k, v in i.items()]
+            if request.POST['username'] in all_value:
+                find = Register.objects.filter(username=request.POST['username'])
+                for f in find:
+                    pwd = f.password
+                    user = f.username
+                    context = {'pwd':pwd, 'user':user}
+                return render(request, 'yourpassword.html', context)
+            else:
+                return render(request, 'notyetregister.html')
+        else:
+            return redirect('/agile/forgotpwd')
+    else:
+        form = ForgetFrom()
+        context = {'form': form}
+        return render(request, 'forgotpwd.html', context)
+
 
 
