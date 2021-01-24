@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'classes',
     'agile',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +162,4 @@ CORS_ALLOW_ORIGIN = (
     'http://localhost:63342',
 )
 
+SITE_ID = 1

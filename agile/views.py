@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 
 from .forms import RegisterForm, ForgetFrom
 
+from django.contrib.sitemaps import Sitemap
 
 def homepage(request):
     if "agile" not in request.session:
@@ -134,6 +135,24 @@ def forgot_pwd_view(request):
         form = ForgetFrom()
         context = {'form': form}
         return render(request, 'forgotpwd.html', context)
+
+
+class AgileSitemap(Sitemap):
+    changefreq = 'weekly'
+
+    def items(self):
+        return Agile.objects.all()
+
+    # def lastmod(self, obj):
+    #     return obj.update_time
+    #
+    def location(self, obj):
+        return "/agile/%d" % obj.pk
+
+
+
+
+
 
 
 
