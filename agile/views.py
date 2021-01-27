@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib import auth
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
@@ -144,7 +146,7 @@ class AgileSitemap(Sitemap):
         return Agile.objects.all()
 
     def lastmod(self, obj):
-        return obj.update_time
+        return datetime.today()
 
     def location(self, obj):
         return "/agile/%d" % obj.pk
