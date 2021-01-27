@@ -143,9 +143,9 @@ class AgileSitemap(Sitemap):
     def items(self):
         return Agile.objects.all()
 
-    # def lastmod(self, obj):
-    #     return obj.update_time
-    #
+    def lastmod(self, obj):
+        return obj.update_time
+
     def location(self, obj):
         return "/agile/%d" % obj.pk
 
