@@ -21,5 +21,6 @@ urlpatterns = [
     path('test/', views.test),
     path('forgotpwd', views.forgot_pwd_view, name='forgotpwd'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('custom-sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 
 ]
