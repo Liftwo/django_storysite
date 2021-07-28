@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!df2%&mo!4=!&f%&3d(-qjz86g6sh9ei+om69xc39t-0r1pwvr'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -83,19 +83,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE':'django.db.backends.sqlite3',
-    #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/db.sqlite3',
-    # },
-    # 'agile_db': {
-    #     'ENGINE':'django.db.backends.sqlite3',
-    #     'NAME': '/Users/zooeytsai/PycharmProjects/mysite/agile_tai.db',
-    # },
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'agile',
-        'USER': 'zooeytsai',
-        'PASSWORD': 'tyla910ai',
+        'USER': '*',
+        'PASSWORD': '*',
         'HOST': 'localhost',
 
     },
